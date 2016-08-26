@@ -1,0 +1,53 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+<?php
+
+namespace CGFeedFactory;
+
+final class smarty_plugins
+{
+    /*
+    const DFLT_ALIAS = '_DFLT_';
+    private static $_init;
+
+    private function __construct() {}
+
+    public static function init()
+    {
+        if( self::$_init ) return;
+        self::$_init = 1;
+
+        $smarty = \CmsApp::get_instance()->GetSmarty();
+        if( !$smarty ) throw new \LogicException('Could not get smarty exception');
+
+        $smarty->register_function('cgff_set','\CGFeedFactory\smarty_plugins::cgff_set');
+        $smarty->register_function('cgff_set','\CGFeedFactory\smarty_plugins::cgff_add');
+        $smarty->register_function('cgff_set','\CGFeedFactory\smarty_plugins::cgff_render');
+    }
+
+    public static function cgff_set($params,&$template)
+    {
+        $feed = \cge_param::get_string($params,'feed',self::DFLT_ALIAS);
+        unset($params['feed']);
+        return factory::set($params);
+    }
+
+    public static function cgff_add($params,&$template)
+    {
+        $feed = \cge_param::get_string($params,'feed',self::DFLT_ALIAS);
+        unset($params['feed']);
+        return factory::add_item($params);
+    }
+
+    public static function cgff_render($params,&$template)
+    {
+        $feed = \cge_param::get_string($params,'feed',self::DFLT_ALIAS);
+        unset($params['feed']);
+        return factory::render($params);
+    }
+    */
+}
+
+/* test */
