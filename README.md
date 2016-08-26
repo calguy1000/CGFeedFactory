@@ -33,7 +33,7 @@ Your First Feed
 
 Smarty Plugins
 --------------
-```{cgff_set [feed=string] [argument=value]*}``` -
+### ```{cgff_set [feed=string] [argument=value]*}``` -
 Set one or more aguments into a feed.
 
 > **Note:** A feed must have at a minimum a link, a title, and a description.
@@ -57,7 +57,7 @@ Set one or more aguments into a feed.
 
     {cgff_set feed='myfeed' link="{root_url}" title="Latest News"}
 
-```{cgff_add [feed=string] [argument=value]*}``` - Add an item to a feed
+### ```{cgff_add [feed=string] [argument=value]*}``` - Add an item to a feed
 > **Note:** Each feed item requires a title, a link, a description, and a date
 
 **Arguments:**
@@ -74,7 +74,7 @@ Set one or more aguments into a feed.
 {cgff_add feed='myfeed' link=$entry->detail_url title=$entry->title description=$entry->content date=$entry->lastModified}
 ```
 
-`{cgff_render [feed=string] [template=string]}` - Render the RSS Feed
+### `{cgff_render [feed=string] [template=string]}` - Render the RSS Feed
 > **Note:** This method will clear any content already output, and change the content type of the page to that specified for the feed.  Afterwards, it will exit execution of the php script.
 
 **Arguments:**
