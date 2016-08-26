@@ -33,8 +33,7 @@ Your First Feed
 
 Smarty Plugins
 --------------
-### ```{cgff_set [feed=string] [argument=value]*}``` -
-Set one or more aguments into a feed.
+### ```{cgff_set [feed=string] [argument=value]*}``` - Set one or more aguments into a feed.
 
 > **Note:** A feed must have at a minimum a link, a title, and a description.
 
