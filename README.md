@@ -15,11 +15,13 @@ Features
 4. Provides an admin panel to enter default values for many of the feed fields
 5. Provides an admin interface to allow defining the basic information for feeds.
 6. Includes numerous sample templates for building different types of feeds.
+7. Create a single feed from multiple different modules.
 
 Your First Feed
 ---------------
 1. Create a new content page using the Content Manager
 2. Select the "Minimal" Template, turn off the wysiwyg editor, and set the page alias to something like "news_rss"
+   **Note:** _It does not really matter what template you choose, but a simple template with minimal markup iss usually suitable as later methods will kill any output and override the output mime type. 
 3. Optionally, if using pretty urls, set the page url for this feed to something line "news.rss".
 
     **Note:** _Some feed readers will recognize the .rssextension._
@@ -28,7 +30,7 @@ Your First Feed
 
     `{News summarytemplate='News Feed'}`
 
-    **Note:** The CGFeedMaker module created a new template called "News Feed" when it was installed.
+    **Note:** The CGFeedMFeedFactory module created a new template called "News Feed" when it was installed.
 5. Save the page.
 
 Smarty Plugins
@@ -78,7 +80,7 @@ Smarty Plugins
 
 **Arguments:**
 * feed - (optional string).  The name of the feed to render.   If this parameter is not specified, then a hardcoded name will be used (__DFLT).  The feed must already exist in memory in order to be rendered.
-* template - (optional string).  Specify the name of a non-default template.  If the name ends with .tpl then a file template in the module directory, or module_custom/CGFeedMaker/templates directory is assumed.
+* template - (optional string).  Specify the name of a non-default template.  If the name ends with .tpl then a file template in the module directory, or module_custom/CGFeedFactory/templates directory is assumed.
 
 Support
 -------
