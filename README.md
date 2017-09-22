@@ -80,7 +80,7 @@ Smarty Plugins
 
 **Arguments:**
 * feed - (optional string).  The name of the feed to render.   If this parameter is not specified, then a hardcoded name will be used (__DFLT).  The feed must already exist in memory in order to be rendered.
-* template - (optional string).  Specify the name of a non-default template.  If the name ends with .tpl then a file template in the module directory, or module_custom/CGFeedFactory/templates directory is assumed.
+* template - (optional string).  Specify the name of a non-default template.  Specify any valid smarty resource, i.e: cms_template::stuff to use a DesignManager template named stuff.  If the template name ends with .tpl then a file template in the module directory, or module_custom/CGFeedFactory/templates directory is assumed.
 
 Support
 -------
