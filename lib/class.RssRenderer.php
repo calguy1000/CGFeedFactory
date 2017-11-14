@@ -8,7 +8,7 @@ class RssRenderer
     private $_mod;
     private $_template = 'rss.tpl';
 
-    public function __construct(feed $feed,\CGFeedFactory $mod,$template)
+    public function __construct(feed $feed,\CGFeedFactory $mod,$template = null)
     {
         if( ! $feed->can_render() ) throw new \InvalidArgumentException('A problem with the feed prevents it from being rendered.');
         $this->_feed = $feed;
@@ -24,4 +24,5 @@ class RssRenderer
         $tpl->assign('mod',$this->_mod);
         return $tpl->fetch();
     }
-}
+
+} // end of class

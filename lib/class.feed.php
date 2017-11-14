@@ -10,6 +10,7 @@ class feed
     private $_name;
     private $_title;
     private $_link;
+    private $_self;
     private $_lang;
     private $_description;
     private $_generator = '{$mod->GetName()} v{$mod->GetVersion()} for CMSMS by calguy1000';
@@ -44,6 +45,7 @@ class feed
         case 'name':
         case 'title':
         case 'link':
+        case 'self':
         case 'description':
         case 'copyright':
         case 'managing_editor':
@@ -85,6 +87,7 @@ class feed
         case 'name':
         case 'title':
         case 'link':
+        case 'self':
         case 'description':
         case 'copyright':
         case 'generator':
@@ -299,11 +302,16 @@ final class feed_item
             $this->$tkey = trim($val);
             break;
 
+        case 'url':
             $this->_link = trim($val);
             break;
 
         case 'date':
-            $this->$tkey = (int) strtotime($val);
+            if( is_int( $val ) ) {
+                $this->$tkey = $val;
+            } else {
+                $this->$tkey = (int) strtotime($val);
+            }
             break;
 
         default:
@@ -316,7 +324,7 @@ final class feed_item
         if( !$this->date ) return;
         IF( !$this->title ) return;
         if( !$this->link ) return;
-        if( !$this->description ) return;
+        //if( !$this->description ) return;
         return TRUE;
     }
 }

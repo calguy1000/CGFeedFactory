@@ -41,7 +41,7 @@ final class CGFeedFactory extends CGExtensions
     function HasAdmin() { return TRUE; }
     function LazyLoadFrontend() { return FALSE; }
     function LazyLoadAdmin() { return TRUE; }
-    function GetVersion() { return '1.0'; }
+    function GetVersion() { return '1.1'; }
     function MinimumCMSVersion() { return '2.1.2'; }
     function GetDependencies() { array('CGExtensions'=>'1.53.1'); }
     function GetAdminDescription() { return $this->Lang('description'); }

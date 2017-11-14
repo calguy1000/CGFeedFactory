@@ -1,13 +1,14 @@
-{strip}<?xml version="1.0"?>
-<rss version="2.0">
+{strip}<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    {if $feed->self}<atom:link href="{$feed->self}" rel="self" type="application/rss+xml" />{/if}
     <title>{$tmp=$feed->title|cms_escape|default:'RSS Feed'}{eval var=$tmp}</title>
     <link>{$tmp=$feed->link|default:"{root_url}"}{eval var=$tmp}</link>
     <description><![CDATA[{$tmp=$feed->description|cms_escape|default:"Latest news at {sitename}"}{eval var=$tmp}]]></description>
     <copyright>{$tmp=$feed->copyright|default:"Copyright {$smarty.now|date_format:'%Y'} {sitename}"}{eval var=$tmp}</copyright>
     {if $feed->lang}<language>{$feed->lang}</language>{/if}
     {if $feed->managing_editor && is_email($feed->managing_editor)}<managingEditor>{$feed->managing_editor}</managingEditor>{/if}
-    {if $feed->admin_email && is_email($feed->admin_email)}<webMaster>{$feed->managing_editor}</webMaster>{/if}
+    {if $feed->admin_email && is_email($feed->admin_email)}<webMaster>{$feed->admin_email}</webMaster>{/if}
     <generator>{$tmp=$feed->generator|default:"{$mod->GetName()}-{$mod->Getversion()} for CMSMS by calguy1000"}{eval var=$tmp}</generator>
     <ttl>{$feed->ttl|default:60}</ttl>
     <lastBuildDate>{$smarty.now|rfc_date}</lastBuildDate>
