@@ -36,7 +36,7 @@
 
 <li><p>Optionally, if using pretty urls, set the page url for this feed to something line "news.rss".</p>
 
-<p><strong>Note:</strong> <em>Some feed readers will recognize the .rssextension.</em></p></li>
+<p><strong>Note:</strong> <em>Some feed readers will recognize the .rss extension.</em></p></li>
 
 <li><p>In the content area for the new content page add.</p>
 
@@ -78,7 +78,7 @@
 
 <li>image - (optional string).  Set, or override the URL to an image for the feed</li>
 
-<li>unseorted - (optional bool).  Set, or override the sorting flag for the feed.  By default feed items are sorted.</li>
+<li>unsorted - (optional bool).  Set, or override the sorting flag for the feed.  By default feed items are sorted.</li>
 
 <li>ttl - (optional int).  The time-to-live for this feed.  A minimum value of 1 is required.</li>
 
